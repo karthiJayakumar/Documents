@@ -1,0 +1,44 @@
+Request OTP Page:
+
+*When click Forgot password link the page should redirect to "Request OTP page".
+1. Check the given message content is fully without any spelling mistake. 
+2. Check whether the screen is responsive when we resize it.
+3. Enter the registered email id and click send OTP button
+4. Enter the registered email with wrong spelling and click OTP button.
+5. Give another user mail ID with same domain and click OTP button.
+
+
+Log-In Page:
+
+1. When the user click the given link in the mail it should redirect to the Login Page
+2. Check all the required fields are in it's right place
+3. Check whether the screen is responsive when we resize it.
+4. Enter the registered mail id mentioned in the mail and given OTP and click Login button.
+5. Enter the registered mail id mentioned in the mail and directly click the Login BUtton.
+6. Enter the registered email with wrong spelling and give the given OTP and click Login button.
+7. Enter the registered mail id mentioned in the mail and give wrong OTP and click Login button.
+8.Enter the unknown mail id and directly click the Login BUtton. 
+9. Enter the unknown mail id and given OTP and click Login button.
+10. Click the Forgot password link.
+11. Enter the registered mail id mentioned in the mail and given OTP 2nd time in the Login Page and click Login button.
+
+Create New Password Page:
+
+1. Check all the required fields are in it's right place
+2. Check whether the screen is responsive when we resize it.
+3. Enter the new password as mentioned the info message and repeat the same and click Save Password button.
+4. Enter the new password as your own and repeat the same and click Save Password button.
+5. Enter given OTP as password and repeat the same and click Save Password button.
+6. Enter new password and leave repeat password field blank and click the button.
+7. Enter new password and give another new password in next column and click the button.
+
+User Profile Page:
+
+1. Check all the required fields are in it's right place
+2. Check whether the screen is responsive when we resize it.
+3. Check the respective User Info is correct in all the fields.
+4. Enter the new password as mentioned the info message and repeat the same and click change Password button.
+5. Enter the new password as your own and repeat the same and click change Password button.
+6. Enter given OTP as password and repeat the same and click change Password button.
+7. Enter new password and leave repeat password field blank and click the button.
+8. Enter new password and give another new password in next column and click the button.

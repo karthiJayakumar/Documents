@@ -1,0 +1,13 @@
+https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+
+Login Test Cases for data driven framework using TestNG
+
+1. Correct userName - Wrong password
+2. Wrong userName - Correct password
+3. Wrong username - Wrong password
+4. Correct username - Correct password
+
+Admin admin12
+admin	admin123
+admin  admin1
+Admin    admin123

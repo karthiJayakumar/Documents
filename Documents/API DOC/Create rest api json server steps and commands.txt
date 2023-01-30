@@ -1,0 +1,19 @@
+
+
+CREATE A REST API WITH JSON SERVER .. THE GIVEN BELOW COMMANDS TO ACHIEVE IT.
+
+
+First we have npm . then
+
+Install the json server :-  npm install -g json-server
+
+Open vs code to create a json file, copy the given code from site and paste on json file.
+
+Then save it as jsonfile 
+
+Finally, run the server using this command: json-server --watch db.json
+
+
+
+
+Created local host :  http://localhost:3000

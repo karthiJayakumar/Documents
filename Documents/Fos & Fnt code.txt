@@ -1,0 +1,852 @@
+/// <reference types="cypress" />
+
+import dayjs from "dayjs";
+import DatagenLoginPage from "../../page-objects/Data_Gen/DatagenLoginPage";
+import PortfolioManagerPage from "../../page-objects/Data_Gen/PortfolioManagerPage";
+import DashboardPage1 from "../../page-objects/Data_Gen/DashboardPage1";
+import AnalticsPage1 from "../../page-objects/Data_Gen/AnalyticsPage1";
+import AbcportfolioPage1 from "../../page-objects/Data_Gen/AbcportfolioPage1";
+import PortfolioAnalyticsPage1 from "../../page-objects/Data_Gen/PortfolioAnalyticsPage1";
+import ExecutionPage1 from "../../page-objects/Data_Gen/ExecutionPage1";
+import AvandFnPage1 from "../../page-objects/Data_Gen/AvandFnPage1";
+
+import DatagenLoginPage2 from "../../page-objects/Data_Gen/DatagenLoginPage2";
+import PortfolioManagerPage2 from "../../page-objects/Data_Gen/PortfolioManagerPage2";
+import DashboardPage2 from "../../page-objects/Data_Gen/DashboardPage2";
+import AnalticsPage2 from "../../page-objects/Data_Gen/AnalyticsPage2";
+import AbcportfolioPage2 from "../../page-objects/Data_Gen/AbcportfolioPage2";
+import PortfolioAnalyticsPage2 from "../../page-objects/Data_Gen/PortfolioAnalyticsPage2";
+import ExecutionPage2 from "../../page-objects/Data_Gen/ExecutionPage2";
+import AvandFnPage2 from "../../page-objects/Data_Gen/AvandFnPage2";
+
+
+
+
+const loginpage = new DatagenLoginPage();
+const portfoliomanagerpage = new PortfolioManagerPage();
+const dashboardpage1 = new DashboardPage1();
+const analyticspage1 = new AnalticsPage1();
+const abcportfoliopage1 = new AbcportfolioPage1();
+const portfolioanalyticspage1 = new PortfolioAnalyticsPage1();
+const executionpage1 = new ExecutionPage1();
+const avandfnpage1 = new AvandFnPage1();
+
+const loginpage2 = new DatagenLoginPage2();
+const portfoliomanagerpage2 = new PortfolioManagerPage2();
+const dashboardpage2 = new DashboardPage2();
+const analyticspage2 = new AnalticsPage2();
+const abcportfoliopage2 = new AbcportfolioPage2();
+const portfolioanalyticspage2 = new PortfolioAnalyticsPage2();
+const executionpage2 = new ExecutionPage2();
+const avandfnpage2 = new AvandFnPage2();
+
+
+
+
+
+describe('To verify Data Gen in FOS',()=> {
+
+
+       
+    beforeEach(()=>{
+    
+   
+    
+        cy.visit('https://stg.finoptsys.com/login?tenant_code=fos');
+        
+       
+    
+        loginpage.verifyUsername();
+        cy.wait(5000);
+    
+    
+       
+    
+    
+    
+    })
+    
+    
+        
+    it(' TO verify Portfolio manager', ()=>{
+        cy.wait(10000);
+    
+         portfoliomanagerpage.verifyPortfolio();
+         cy.wait(11000);
+         portfoliomanagerpage.isPortfoliocardDisplay();
+         cy.wait(5000);
+         portfoliomanagerpage.isFilePresent();
+
+         cy.wait(5000);
+         portfoliomanagerpage.getTotalfilesNo();
+
+   
+    
+    
+    
+    })
+        
+    
+        it('To verify Dashboard', ()=>{
+    
+    
+          
+            cy.wait(5000);
+            dashboardpage1.verifyDashboard1();
+    
+            cy.wait(10000);
+            
+            dashboardpage1.getAbcValues();
+            dashboardpage1.getAbcuseValue();
+            dashboardpage1.getMatureTradeValue();
+            dashboardpage1.getOpenTradeValue();
+            dashboardpage1.getBoxAvailableValue();
+            dashboardpage1.getBoxNeedsValue();
+    
+    
+            
+    
+            
+    
+            
+    
+    
+    
+    
+            
+            })
+    
+    
+            it('To verify the Analytics', ()=>{
+    
+             
+               analyticspage1.verifyAnalytics1();
+               analyticspage1.verifyAbcmanaltics1();
+               analyticspage1.verifyQuanity();
+               analyticspage1.getQuantityvalue();
+              
+                   
+    
+    
+    
+    
+    
+    
+    
+    
+    
+               
+    
+    
+    
+    
+    })
+    
+    it('To verify the ABC portfolio', ()=>{
+    
+    cy.wait(2000);
+        abcportfoliopage1.verifyAbcportfolio();
+        cy.wait(10000);
+        abcportfoliopage1.isAbcportfolioDisplay();
+        cy.wait(20000);
+        abcportfoliopage1.getToatalrows();
+
+        
+    
+    
+        
+    })
+    
+    it('To verify the portfolio analytics', ()=>{
+    
+    
+       
+    
+        portfolioanalyticspage1.verifyPortfolioAnalytics();
+        portfolioanalyticspage1.verifyCollateralBasket();
+        cy.wait(2000);
+        portfolioanalyticspage1.verifyConstructNew();
+        portfolioanalyticspage1.verifyManualbutton();
+        cy.wait(11000);
+        portfolioanalyticspage1.isQuantityDisplay();
+
+    
+    
+        
+    
+    
+    
+    
+    
+    
+    
+    })
+    
+    it('To verify the Execution', ()=>{
+    
+       executionpage1.verifyExecution();
+       executionpage1.verifyP2p();
+       executionpage1.isP2pDisplay();
+       executionpage1.verifyP2p1();
+       executionpage1.isSinglesecurityDisplay();
+       executionpage1.verifySinglesecurity();
+       executionpage1.passSecurityId();
+
+       
+       
+    
+        
+         
+    
+    
+    })
+    
+     it(' To verify AV&Fn', function(){
+    
+        avandfnpage1.verifyAvandFn();
+        cy.wait(7000);
+        avandfnpage1.isQuantityDisplay();
+    
+        
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+     })        
+    
+    })
+
+    describe('To verify DataGen in FNT' , ()=>{
+
+
+        beforeEach(()=>{
+    
+            cy.visit('https://stg.finoptsys.com/login?tenant_code=fnt');
+            
+           
+        
+            loginpage2.verifyUsername();
+            cy.wait(5000);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+         })
+        
+        
+         it(' TO verify Portfolio manager', ()=>{
+            cy.wait(10000);
+        
+             portfoliomanagerpage2.verifyPortfolio();
+             cy.wait(10000);
+             portfoliomanagerpage2.isPortfoliocardDisplay();
+             cy.wait(10000);
+             portfoliomanagerpage2.isFilePresent();
+             
+        
+        
+        
+        })
+            
+        
+            it('To verify Dashboard', ()=>{
+        
+        
+              
+                cy.wait(5000);
+                dashboardpage2.verifyDashboard1();
+        
+                cy.wait(10000);
+                
+                dashboardpage2.getAbcsourceVal();
+                dashboardpage2.getAbcUseVal();
+                dashboardpage2.getMatureTradenotional();
+                dashboardpage2.getOpenTradenotional();
+                dashboardpage2.getBoxAvailability();
+                dashboardpage2.getBoxneedsval();
+    
+        
+        
+                
+        
+                
+        
+                
+        
+        
+        
+        
+                
+                })
+        
+        
+                it('To verify the Analytics', ()=>{
+        
+                 
+                   analyticspage2.verifyAnalytics1();
+                   analyticspage2.verifyAbcmanaltics1();
+                   analyticspage2.verifyQuanity();
+                   cy.wait(10000);
+                   analyticspage2.getQuantityvalue();
+                       
+                   
+                       
+        
+        
+        
+        
+        
+        
+        
+        
+        
+                   
+        
+        
+        
+        
+        })
+        
+        it('To verify the ABC portfolio', ()=>{
+        
+        cy.wait(2000);
+            abcportfoliopage2.verifyAbcportfolio();
+            cy.wait(10000);
+            abcportfoliopage2.isAbcportfolioDisplay();
+            cy.wait(11000);
+            abcportfoliopage2.getToatalrows();
+        
+        
+            
+        })
+        
+        it('To verify the portfolio analytics', ()=>{
+        
+        
+           
+        
+            portfolioanalyticspage2.verifyPortfolioAnalytics();
+            portfolioanalyticspage2.verifyCollateralBasket();
+            cy.wait(2000);
+            portfolioanalyticspage2.verifyConstructNew();
+            portfolioanalyticspage2.verifyManualbutton();
+            cy.wait(11000);
+            portfolioanalyticspage2.isQuantityDisplay();
+        
+            
+        
+        
+        
+        
+        
+        
+        
+        })
+        
+        it('To verify the Execution', ()=>{
+        
+           executionpage2.verifyExecution();
+           executionpage2.verifyP2p();
+           executionpage2.isP2pDisplay();
+           executionpage2.verifyP2p1();
+           executionpage2.isSinglesecurityDisplay();
+           executionpage2.verifySinglesecurity();
+           executionpage2.passSecurityId();
+           
+        
+            
+             
+        
+        
+        })
+        
+         it(' To verify AV&Fn', function(){
+        
+            avandfnpage2.verifyAvandFn();
+            cy.wait(10000);
+            avandfnpage2.isQuantityDisplay();
+        
+            
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+         })        
+    
+    
+     })
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+     
+    
+
+/// <reference types="cypress" />
+
+import dayjs from "dayjs";
+import DatagenLoginPage from "../../page-objects/Data_Gen/DatagenLoginPage";
+import PortfolioManagerPage from "../../page-objects/Data_Gen/PortfolioManagerPage";
+import DashboardPage1 from "../../page-objects/Data_Gen/DashboardPage1";
+import AnalticsPage1 from "../../page-objects/Data_Gen/AnalyticsPage1";
+import AbcportfolioPage1 from "../../page-objects/Data_Gen/AbcportfolioPage1";
+import PortfolioAnalyticsPage1 from "../../page-objects/Data_Gen/PortfolioAnalyticsPage1";
+import ExecutionPage1 from "../../page-objects/Data_Gen/ExecutionPage1";
+import AvandFnPage1 from "../../page-objects/Data_Gen/AvandFnPage1";
+
+import DatagenLoginPage2 from "../../page-objects/Data_Gen/DatagenLoginPage2";
+import PortfolioManagerPage2 from "../../page-objects/Data_Gen/PortfolioManagerPage2";
+import DashboardPage2 from "../../page-objects/Data_Gen/DashboardPage2";
+import AnalticsPage2 from "../../page-objects/Data_Gen/AnalyticsPage2";
+import AbcportfolioPage2 from "../../page-objects/Data_Gen/AbcportfolioPage2";
+import PortfolioAnalyticsPage2 from "../../page-objects/Data_Gen/PortfolioAnalyticsPage2";
+import ExecutionPage2 from "../../page-objects/Data_Gen/ExecutionPage2";
+import AvandFnPage2 from "../../page-objects/Data_Gen/AvandFnPage2";
+
+
+
+
+const loginpage = new DatagenLoginPage();
+const portfoliomanagerpage = new PortfolioManagerPage();
+const dashboardpage1 = new DashboardPage1();
+const analyticspage1 = new AnalticsPage1();
+const abcportfoliopage1 = new AbcportfolioPage1();
+const portfolioanalyticspage1 = new PortfolioAnalyticsPage1();
+const executionpage1 = new ExecutionPage1();
+const avandfnpage1 = new AvandFnPage1();
+
+const loginpage2 = new DatagenLoginPage2();
+const portfoliomanagerpage2 = new PortfolioManagerPage2();
+const dashboardpage2 = new DashboardPage2();
+const analyticspage2 = new AnalticsPage2();
+const abcportfoliopage2 = new AbcportfolioPage2();
+const portfolioanalyticspage2 = new PortfolioAnalyticsPage2();
+const executionpage2 = new ExecutionPage2();
+const avandfnpage2 = new AvandFnPage2();
+
+
+
+
+
+describe('To verify Data Gen in FOS',()=> {
+
+
+       
+    beforeEach(()=>{
+    
+   
+    
+        cy.visit('https://stg.finoptsys.com/login?tenant_code=fos');
+        
+       
+    
+        loginpage.verifyUsername();
+        cy.wait(5000);
+    
+    
+       
+    
+    
+    
+    })
+    
+    
+        
+    it(' TO verify Portfolio manager', ()=>{
+        cy.wait(10000);
+    
+         portfoliomanagerpage.verifyPortfolio();
+         cy.wait(11000);
+         portfoliomanagerpage.isPortfoliocardDisplay();
+         cy.wait(5000);
+         portfoliomanagerpage.isFilePresent();
+
+         cy.wait(5000);
+         portfoliomanagerpage.getTotalfilesNo();
+
+   
+    
+    
+    
+    })
+        
+    
+        it('To verify Dashboard', ()=>{
+    
+    
+          
+            cy.wait(5000);
+            dashboardpage1.verifyDashboard1();
+    
+            cy.wait(10000);
+            
+            dashboardpage1.getAbcValues();
+            dashboardpage1.getAbcuseValue();
+            dashboardpage1.getMatureTradeValue();
+            dashboardpage1.getOpenTradeValue();
+            dashboardpage1.getBoxAvailableValue();
+            dashboardpage1.getBoxNeedsValue();
+    
+    
+            
+    
+            
+    
+            
+    
+    
+    
+    
+            
+            })
+    
+    
+            it('To verify the Analytics', ()=>{
+    
+             
+               analyticspage1.verifyAnalytics1();
+               analyticspage1.verifyAbcmanaltics1();
+               analyticspage1.verifyQuanity();
+               analyticspage1.getQuantityvalue();
+              
+                   
+    
+    
+    
+    
+    
+    
+    
+    
+    
+               
+    
+    
+    
+    
+    })
+    
+    it('To verify the ABC portfolio', ()=>{
+    
+    cy.wait(2000);
+        abcportfoliopage1.verifyAbcportfolio();
+        cy.wait(10000);
+        abcportfoliopage1.isAbcportfolioDisplay();
+        cy.wait(20000);
+        abcportfoliopage1.getToatalrows();
+
+        
+    
+    
+        
+    })
+    
+    it('To verify the portfolio analytics', ()=>{
+    
+    
+       
+    
+        portfolioanalyticspage1.verifyPortfolioAnalytics();
+        portfolioanalyticspage1.verifyCollateralBasket();
+        cy.wait(2000);
+        portfolioanalyticspage1.verifyConstructNew();
+        portfolioanalyticspage1.verifyManualbutton();
+        cy.wait(11000);
+        portfolioanalyticspage1.isQuantityDisplay();
+
+    
+    
+        
+    
+    
+    
+    
+    
+    
+    
+    })
+    
+    it('To verify the Execution', ()=>{
+    
+       executionpage1.verifyExecution();
+       executionpage1.verifyP2p();
+       executionpage1.isP2pDisplay();
+       executionpage1.verifyP2p1();
+       executionpage1.isSinglesecurityDisplay();
+       executionpage1.verifySinglesecurity();
+       executionpage1.passSecurityId();
+
+       
+       
+    
+        
+         
+    
+    
+    })
+    
+     it(' To verify AV&Fn', function(){
+    
+        avandfnpage1.verifyAvandFn();
+        cy.wait(7000);
+        avandfnpage1.isQuantityDisplay();
+    
+        
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+     })        
+    
+    })
+
+    describe('To verify DataGen in FNT' , ()=>{
+
+
+        beforeEach(()=>{
+    
+            cy.visit('https://stg.finoptsys.com/login?tenant_code=fnt');
+            
+           
+        
+            loginpage2.verifyUsername();
+            cy.wait(5000);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+         })
+        
+        
+         it(' TO verify Portfolio manager', ()=>{
+            cy.wait(10000);
+        
+             portfoliomanagerpage2.verifyPortfolio();
+             cy.wait(10000);
+             portfoliomanagerpage2.isPortfoliocardDisplay();
+             cy.wait(10000);
+             portfoliomanagerpage2.isFilePresent();
+             
+        
+        
+        
+        })
+            
+        
+            it('To verify Dashboard', ()=>{
+        
+        
+              
+                cy.wait(5000);
+                dashboardpage2.verifyDashboard1();
+        
+                cy.wait(10000);
+                
+                dashboardpage2.getAbcsourceVal();
+                dashboardpage2.getAbcUseVal();
+                dashboardpage2.getMatureTradenotional();
+                dashboardpage2.getOpenTradenotional();
+                dashboardpage2.getBoxAvailability();
+                dashboardpage2.getBoxneedsval();
+    
+        
+        
+                
+        
+                
+        
+                
+        
+        
+        
+        
+                
+                })
+        
+        
+                it('To verify the Analytics', ()=>{
+        
+                 
+                   analyticspage2.verifyAnalytics1();
+                   analyticspage2.verifyAbcmanaltics1();
+                   analyticspage2.verifyQuanity();
+                   cy.wait(10000);
+                   analyticspage2.getQuantityvalue();
+                       
+                   
+                       
+        
+        
+        
+        
+        
+        
+        
+        
+        
+                   
+        
+        
+        
+        
+        })
+        
+        it('To verify the ABC portfolio', ()=>{
+        
+        cy.wait(2000);
+            abcportfoliopage2.verifyAbcportfolio();
+            cy.wait(10000);
+            abcportfoliopage2.isAbcportfolioDisplay();
+            cy.wait(11000);
+            abcportfoliopage2.getToatalrows();
+        
+        
+            
+        })
+        
+        it('To verify the portfolio analytics', ()=>{
+        
+        
+           
+        
+            portfolioanalyticspage2.verifyPortfolioAnalytics();
+            portfolioanalyticspage2.verifyCollateralBasket();
+            cy.wait(2000);
+            portfolioanalyticspage2.verifyConstructNew();
+            portfolioanalyticspage2.verifyManualbutton();
+            cy.wait(11000);
+            portfolioanalyticspage2.isQuantityDisplay();
+        
+            
+        
+        
+        
+        
+        
+        
+        
+        })
+        
+        it('To verify the Execution', ()=>{
+        
+           executionpage2.verifyExecution();
+           executionpage2.verifyP2p();
+           executionpage2.isP2pDisplay();
+           executionpage2.verifyP2p1();
+           executionpage2.isSinglesecurityDisplay();
+           executionpage2.verifySinglesecurity();
+           executionpage2.passSecurityId();
+           
+        
+            
+             
+        
+        
+        })
+        
+         it(' To verify AV&Fn', function(){
+        
+            avandfnpage2.verifyAvandFn();
+            cy.wait(10000);
+            avandfnpage2.isQuantityDisplay();
+        
+            
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+         })        
+    
+    
+     })
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+     
+    
+
+
+     
+    
+
+
+
+
+
+
+
+     
+    
+
+
+
+
+
+

@@ -1,0 +1,21 @@
+GET --> Use to retrive the data from the resource
+
+1-->Params used to taken parameter details from the given url link --Ex:https://reqres.in/api/users?page=2
+
+Params automatically to display - |key   | Value|
+                                  |Page  |   2  |
+
+
+
+2--> For POST we need body structur , so we have to copy and paste the code into the body structure
+before paste the code , we need to click -> raw -> Text -> Json then paste it.
+
+
+3--> For basic authentication use this --> https://postman-echo.com/basic-auth
+
+4--> Redirect url for postman call back - https://oauth.pstmn.io/v1/callback
+
+5--> Google auth url : https://accounts.google.com/o/oauth2/token
+
+6--> Google access Token url : https://accounts.google.com/o/oauth2/token (or)
+                                https://developers.google.com/identity/protocols/oauth2#2.-obtain-an-access-token-from-the-google-authorization-server.

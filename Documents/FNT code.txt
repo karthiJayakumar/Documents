@@ -1,0 +1,172 @@
+ describe('To verify DataGen in FNT' , ()=>{
+
+
+    beforeEach(()=>{
+
+        cy.visit('https://stg.finoptsys.com/login?tenant_code=fnt');
+        
+       
+    
+        loginpage2.verifyUsername();
+        cy.wait(5000);
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+     })
+    
+    
+     it(' TO verify Portfolio manager', ()=>{
+        cy.wait(10000);
+    
+         portfoliomanagerpage2.verifyPortfolio();
+         cy.wait(10000);
+         portfoliomanagerpage2.isPortfoliocardDisplay();
+         cy.wait(10000);
+         portfoliomanagerpage2.isFilePresent();
+         
+    
+    
+    
+    })
+        
+    
+        it('To verify Dashboard', ()=>{
+    
+    
+          
+            cy.wait(5000);
+            dashboardpage2.verifyDashboard1();
+    
+            cy.wait(10000);
+            
+            dashboardpage2.getAbcsourceVal();
+            dashboardpage2.getAbcUseVal();
+            dashboardpage2.getMatureTradenotional();
+            dashboardpage2.getOpenTradenotional();
+            dashboardpage2.getBoxAvailability();
+            dashboardpage2.getBoxneedsval();
+
+    
+    
+            
+    
+            
+    
+            
+    
+    
+    
+    
+            
+            })
+    
+    
+            it('To verify the Analytics', ()=>{
+    
+             
+               analyticspage2.verifyAnalytics1();
+               analyticspage2.verifyAbcmanaltics1();
+               analyticspage2.verifyQuanity();
+               cy.wait(10000);
+               analyticspage2.getQuantityvalue();
+                   
+               
+                   
+    
+    
+    
+    
+    
+    
+    
+    
+    
+               
+    
+    
+    
+    
+    })
+    
+    it('To verify the ABC portfolio', ()=>{
+    
+    cy.wait(2000);
+        abcportfoliopage2.verifyAbcportfolio();
+        cy.wait(10000);
+        abcportfoliopage2.isAbcportfolioDisplay();
+        cy.wait(11000);
+        abcportfoliopage2.getToatalrows();
+    
+    
+        
+    })
+    
+    it('To verify the portfolio analytics', ()=>{
+    
+    
+       
+    
+        portfolioanalyticspage2.verifyPortfolioAnalytics();
+        portfolioanalyticspage2.verifyCollateralBasket();
+        cy.wait(2000);
+        portfolioanalyticspage2.verifyConstructNew();
+        portfolioanalyticspage2.verifyManualbutton();
+        cy.wait(11000);
+        portfolioanalyticspage2.isQuantityDisplay();
+    
+        
+    
+    
+    
+    
+    
+    
+    
+    })
+    
+    it('To verify the Execution', ()=>{
+    
+       executionpage2.verifyExecution();
+       executionpage2.verifyP2p();
+       executionpage2.isP2pDisplay();
+       executionpage2.verifyP2p1();
+       executionpage2.isSinglesecurityDisplay();
+       executionpage2.verifySinglesecurity();
+       executionpage2.passSecurityId();
+       
+    
+        
+         
+    
+    
+    })
+    
+     it(' To verify AV&Fn', function(){
+    
+        avandfnpage2.verifyAvandFn();
+        cy.wait(10000);
+        avandfnpage2.isQuantityDisplay();
+    
+        
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+     })        
+
+
+ })

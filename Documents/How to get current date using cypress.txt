@@ -1,0 +1,5 @@
+
+
+How to get current date using cypress
+
+Cypress.moment().format('MM-DD-YYYY')

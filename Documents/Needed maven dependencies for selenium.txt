@@ -1,0 +1,20 @@
+
+
+Needed Maven dependencies for selenium
+
+1. Apache maven dependency plugin
+2. Apache poi maven dependency
+3. Maven dependency for selenium
+4. commons-io Maven dependency
+5. webdriver manager maven dependency
+6. junit maven dependency
+7. Hamcrest all
+8. TestNG
+9. Jcommander
+10. Cucumber Java dependencies
+11. Cucumber Junit dependencies
+12. Maven Cucumber reporting 
+13. Jxlapi dependencies
+14. Avenstack Extent report depend 
+15. io.reactivex dependencies
+

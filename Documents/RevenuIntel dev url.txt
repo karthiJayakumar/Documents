@@ -1,0 +1,20 @@
+
+
+RevenuIntel Dev Url
+http://34.207.82.150:3000/
+
+Id- admin@admin.com
+Password - password!23
+
+
+
+Check the maximum length of the address field.
+
+Check if the user should get a validation error message if a user leaves a blank field.
+
+Check whether the user can enter a combination of alpha, numeric and special characters into the address field.
+
+
+Verify if the user cannot proceed without filling all the mandatory fields.
+Verify that hints are provided for each field on the form, for the ease of use.
+

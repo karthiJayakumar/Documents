@@ -1,0 +1,17 @@
+
+
+HOW TO GET LOCATORS FOR "SVG" and how to get exact locator for multiple element 
+
+Eg: If 2 or more svg is there, we use number [1]
+
+Ex: syntax
+
+(//*[name()='svg' and @class='uch-psvg'])[1]//*[name()='rect']
+
+
+So, we can swith the exact parent to child element 
+
+
+2. How to get div tag and class
+
+//div[@class='ExnoTd']
